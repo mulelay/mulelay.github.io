@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淫三国-野史秘闻与戏说演义资料站</title>
+    <meta name="description" content="淫三国专题站，挖掘三国时期野史、艳史、民间戏说与演义逸闻，提供稗官野史、市井传说、人物轶事等趣味历史内容，以通俗方式讲述三国背后不为人知的奇闻异事，仅供文化娱乐参考。">
+    <meta name="keywords" content="淫三国,三国野史,三国艳史,三国秘闻,戏说三国,民间传说,演义趣闻,三国八卦,历史趣谈">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5efe2;
+            color: #2e241d;
+            line-height: 1.7;
+        }
+        .wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #fffaf1;
+            box-shadow: 0 0 25px rgba(0,0,0,0.08);
+            border-left: 1px solid #e2d5bf;
+            border-right: 1px solid #e2d5bf;
+        }
+        /* 头部 */
+        .site-header {
+            background: #3d1f0f;
+            background: linear-gradient(145deg, #3a1c0d 0%, #57351f 100%);
+            padding: 1.8rem 2rem 1.2rem;
+            border-bottom: 5px solid #b48a5c;
+            position: relative;
+        }
+        .header-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #f6e1bb;
+            letter-spacing: 4px;
+            text-shadow: 4px 4px 0 #1a0c06;
+            font-family: 'STKaiti', 'KaiTi', serif;
+            line-height: 1.2;
+        }
+        .logo h1 span {
+            color: #e6b174;
+            font-size: 1.6rem;
+            font-weight: normal;
+            margin-left: 10px;
+            letter-spacing: 2px;
+        }
+        .logo p {
+            color: #dac29c;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        .header-search {
+            display: flex;
+            background: #1f0f07;
+            border-radius: 40px;
+            padding: 0.2rem 0.2rem 0.2rem 1.2rem;
+            border: 1px solid #b48a5c;
+        }
+        .header-search input {
+            background: transparent;
+            border: none;
+            color: #f6e1bb;
+            outline: none;
+            font-size: 1rem;
+            width: 180px;
+            padding: 0.4rem 0;
+        }
+        .header-search button {
+            background: #b48a5c;
+            border: none;
+            color: #241409;
+            font-weight: bold;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .header-search button:hover {
+            background: #d8ad7b;
+        }
+        /* 导航 */
+        .main-nav {
+            background: #301809;
+            border-top: 1px solid #8f6a45;
+            border-bottom: 1px solid #8f6a45;
+            padding: 0 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .main-nav li {
+            margin: 0;
+        }
+        .main-nav a {
+            display: block;
+            color: #f3dec2;
+            text-decoration: none;
+            padding: 0.8rem 1.4rem;
+            font-weight: 600;
+            font-size: 1.0rem;
+            transition: 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        .main-nav a:hover {
+            background: #4b2b16;
+            color: #ffd89a;
+            border-bottom-color: #dbb07c;
+        }
+        /* 首屏 hero 采用古卷风格 */
+        .hero {
+            background: #e9dac4;
+            background-image: linear-gradient(135deg, #e4d0b0 0%, #f3e8d6 100%);
+            padding: 2.5rem 2rem 2.2rem;
+            border-bottom: 1px solid #d3b794;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2rem;
+        }
+        .hero-main h2 {
+            font-size: 2.2rem;
+            color: #3b1e0b;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            border-left: 8px solid #9e6b3a;
+            padding-left: 1.3rem;
+            font-family: 'STKaiti', 'KaiTi', serif;
+        }
+        .hero-main p {
+            color: #4e3622;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        .hero-tags {
+            margin-top: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .hero-tag {
+            background: #f7efe1;
+            border: 1px solid #a9845d;
+            border-radius: 30px;
+            padding: 0.25rem 1.1rem;
+            color: #4c2c15;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .hero-tag:hover {
+            background: #4c3018;
+            color: #f0dfc4;
+        }
+        .hero-side {
+            background: rgba(78, 48, 27, 0.1);
+            border-radius: 20px;
+            padding: 1rem 1.5rem;
+            border: 1px dashed #a9845d;
+        }
+        .hero-side h3 {
+            color: #4e2a16;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #a9845d;
+            padding-bottom: 0.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .hero-side ul {
+            list-style: none;
+        }
+        .hero-side li {
+            padding: 0.4rem 0;
+            border-bottom: 1px dotted #c6a580;
+            font-size: 0.95rem;
+        }
+        .hero-side li::before {
+            content: "☯ ";
+            color: #7c4e25;
+        }
+        /* 栏目标题 */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #351d0d;
+            padding: 0 1rem 0.4rem;
+            margin: 2.2rem 0 1rem;
+            border-bottom: 4px double #ad845a;
+            display: inline-block;
+            letter-spacing: 2px;
+            font-family: 'STKaiti', 'KaiTi', serif;
+        }
+        /* 逸闻卡片区 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+            padding: 0 2rem 1.5rem;
+        }
+        .card {
+            background: #fffdf7;
+            border: 1px solid #dac3a2;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 16px -8px rgba(80, 50, 20, 0.2);
+            border-color: #b28a5b;
+        }
+        .card-img {
+            height: 130px;
+            background: #d9c7ab;
+            background: radial-gradient(circle at 20% 30%, #b2946e, #5f3a22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f3e0c9;
+            font-size: 2.6rem;
+            font-weight: bold;
+            font-family: 'KaiTi', serif;
+            letter-spacing: 6px;
+            text-shadow: 2px 2px 0 #1c0d05;
+        }
+        .card-content {
+            padding: 1rem 1.2rem 1.3rem;
+        }
+        .card-content h3 {
+            font-size: 1.3rem;
+            color: #3e2313;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+        .card-content p {
+            color: #4f3a29;
+            font-size: 0.9rem;
+        }
+        .meta {
+            font-size: 0.75rem;
+            color: #8a6e52;
+            margin-top: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        /* 双栏布局 */
+        .double-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 0.5rem 2rem 2rem;
+        }
+        .list-panel {
+            background: #faf3e8;
+            border: 1px solid #dac3a2;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+        }
+        .list-panel h3 {
+            color: #4a2b14;
+            font-size: 1.4rem;
+            border-left: 4px solid #9d6f43;
+            padding-left: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .list-panel ul {
+            list-style: none;
+        }
+        .list-panel li {
+            padding: 0.55rem 0;
+            border-bottom: 1px solid #e7d6bc;
+            display: flex;
+            align-items: baseline;
+        }
+        .list-panel li span {
+            color: #a76f3c;
+            font-weight: bold;
+            margin-right: 0.8rem;
+        }
+        .list-panel li a {
+            color: #3d2b1b;
+            text-decoration: none;
+            font-weight: 500;
+            flex: 1;
+        }
+        .list-panel li a:hover {
+            color: #8a4f1c;
+            text-decoration: underline;
+        }
+        /* 演义趣谈 */
+        .story-block {
+            padding: 0.5rem 2rem 2.5rem;
+        }
+        .story-item {
+            background: #f6ecdb;
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 10px solid #a67445;
+        }
+        .story-item h3 {
+            font-size: 1.5rem;
+            color: #3b1e09;
+        }
+        .story-item p {
+            color: #3d2c1c;
+            margin-top: 0.6rem;
+        }
+        /* FAQ */
+        .faq-section {
+            padding: 0.5rem 2rem 2.5rem;
+        }
+        .faq-item {
+            background: #faf1e2;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .faq-item summary {
+            font-weight: 700;
+            color: #4e2c13;
+            cursor: pointer;
+            font-size: 1.1rem;
+            outline: none;
+        }
+        .faq-item p {
+            color: #3e2c1e;
+            margin-top: 0.6rem;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #2f1a0d;
+            color: #bda786;
+            padding: 2rem;
+            text-align: center;
+            border-top: 4px solid #996f45;
+            font-size: 0.9rem;
+        }
+        .site-footer a {
+            color: #e2c8a6;
+            text-decoration: none;
+        }
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #9d896f;
+            margin-top: 1rem;
+        }
+        /* 响应式 */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .double-col {
+                grid-template-columns: 1fr;
+                padding: 0.5rem 1.2rem;
+            }
+            .card-grid {
+                padding: 0 1rem;
+            }
+            .logo h1 {
+                font-size: 2.2rem;
+            }
+            .header-search input {
+                width: 100px;
+            }
+            .main-nav a {
+                padding: 0.6rem 0.9rem;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .site-header {
+                padding: 1rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+            .hero {
+                padding: 1.5rem 1rem;
+            }
+            .story-block, .faq-section, .double-col, .card-grid {
+                padding-left: 0.8rem;
+                padding-right: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!-- 头部 -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <h1>淫三国<span>·野史别传</span></h1>
+                <p>戏说稗官 艳闻轶事 · 仅供消遣</p>
+            </div>
+            <div class="header-search">
+                <input type="text" placeholder="搜秘闻、人物...">
+                <button type="button">寻古</button>
+            </div>
+        </div>
+    </header>
+    <!-- 导航 -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#hero">首页</a></li>
+            <li><a href="#wild">野史艳闻</a></li>
+            <li><a href="#rank">风流榜单</a></li>
+            <li><a href="#story">演义趣谈</a></li>
+            <li><a href="#faq">考据问答</a></li>
+        </ul>
+    </nav>
+
+    <!-- 首屏 -->
+    <div class="hero" id="hero">
+        <div class="hero-main">
+            <h2>三国之外的春色秘卷</h2>
+            <p>正史讳莫如深，野史却津津乐道。本处以戏笔搜罗三国时代流传于市井的艳闻、暧昧、家庭秘辛与不登大雅之堂的民俗笑谈。所有内容皆来自民间说部、地方戏文与笔记小说，当不得真，只作茶余饭后之娱。</p>
+            <div class="hero-tags">
+                <a href="#" class="hero-tag"># 貂蝉迷云</a>
+                <a href="#" class="hero-tag"># 二乔春深</a>
+                <a href="#" class="hero-tag"># 曹魏宫闱</a>
+                <a href="#" class="hero-tag"># 刘安杀妻</a>
+                <a href="#" class="hero-tag"># 甄宓艳史</a>
+            </div>
+        </div>
+        <div class="hero-side">
+            <h3>☯ 今日艳闻</h3>
+            <ul>
+                <li>「江东二乔」背后那些被演义掩埋的风月</li>
+                <li>曹操与张绣婶婶的秘闻真相考</li>
+                <li>刘备入蜀后与刘璋遗孀的流言蜚语</li>
+                <li>孙尚香与刘备年龄差引发的民间段子</li>
+                <li>诸葛亮之妻黄月英的乡野传说</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 野史艳闻卡片 -->
+    <section id="wild">
+        <h2 class="section-title">🌸 野史艳闻 · 香艳秘卷</h2>
+        <div class="card-grid">
+            <article class="card">
+                <div class="card-img">貂蝉</div>
+                <div class="card-content">
+                    <h3>貂蝉迷云：连环计外的风月</h3>
+                    <p>民间戏文里貂蝉与吕布私会凤仪亭，更与董卓有染，之后却归关羽……野史中她下落成谜，艳闻却不止于王允府中。</p>
+                    <div class="meta"><span># 秘闻</span><span>2.3k 浏览</span></div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img">二乔</div>
+                <div class="card-content">
+                    <h3>铜雀春深锁二乔</h3>
+                    <p>杜牧一句诗引出多少艳想，民间传说曹操起铜雀台实为二乔。但史料无凭，只留下文人墨客笔下的风流债。</p>
+                    <div class="meta"><span># 艳谈</span><span>1.8k 浏览</span></div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img">甄宓</div>
+                <div class="card-content">
+                    <h3>甄妃艳史：曹丕与曹植的秘影</h3>
+                    <p>《洛神赋》被附会为对甄氏的恋慕，野史更添曹丕赐死甄后，曹植痴念的香艳悲剧。宫廷隐私，越传越艳。</p>
+                    <div class="meta"><span># 宫闱</span><span>3.1k 浏览</span></div>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-img">邹氏</div>
+                <div class="card-content">
+                    <h3>曹操与张绣婶母</h3>
+                    <p>宛城之战因曹操纳邹氏而爆发，正史寥寥数语，野史却绘声绘色描述帐中春色，以致典韦丧命。</p>
+                    <div class="meta"><span># 战地春色</span><span>2.7k 浏览</span></div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 双栏列表 -->
+    <div class="double-col" id="rank">
+        <div class="list-panel">
+            <h3>🏮 市井风流榜</h3>
+            <ul>
+                <li><span>1</span><a href="#">江东二乔 · 绝代双姝的乡野艳曲</a></li>
+                <li><span>2</span><a href="#">貂蝉 · 身世不明却艳名远播</a></li>
+                <li><span>3</span><a href="#">甄宓 · 洛神赋背后的叔嫂情谜</a></li>
+                <li><span>4</span><a href="#">孙尚香 · 弓腰姬的闺阁传闻</a></li>
+                <li><span>5</span><a href="#">邹氏 · 宛城一夜</a></li>
+                <li><span>6</span><a href="#">刘安之妻 · 为君献食的惨剧</a></li>
+            </ul>
+        </div>
+        <div class="list-panel">
+            <h3>📜 稗官艳语 · 新辑</h3>
+            <ul>
+                <li><span>◉</span><a href="#">三国第一渣男？曹操的风流债</a></li>
+                <li><span>◉</span><a href="#">刘备入蜀后，与刘璋遗孀吴氏的联姻隐情</a></li>
+                <li><span>◉</span><a href="#">诸葛亮的丑妻黄月英，民间传说却另有香艳故事</a></li>
+                <li><span>◉</span><a href="#">马超之女嫁与刘禅，宫闱中暗藏春事</a></li>
+                <li><span>◉</span><a href="#">张飞的两个女儿都当了皇后？民间戏说</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 演义趣谈 -->
+    <section class="story-block" id="story">
+        <h2 class="section-title">🀄 演义趣谈 · 戏说风流</h2>
+        <div class="story-item">
+            <h3>「淫三国」的由来：明清艳情小说与三国</h3>
+            <p>明清时期曾流行将三国人物与市井艳情结合的评话、弹词，如《三国志玉玺传》等，含有大量暧昧描写。这类作品虽不入流，却反映了民间对权力与欲望的想象，“淫三国”一词便由此类私刻本中来，现代多指以三国为背景的戏说艳文。</p>
+        </div>
+        <div class="story-item">
+            <h3>野史里的春意：从“曹孟德好人妻”说起</h3>
+            <p>“好人妻”虽是现代网络梗，却与《三国志》裴注引《吴历》等记载有微妙呼应。演义与民间故事放大这些细节，将曹操塑造成风流霸主。本栏目收集的便是这类带有情色想象的民间叙事，供读者了解文化现象。</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <h2 class="section-title">❓ 关于“淫三国”的常见疑问</h2>
+        <details class="faq-item">
+            <summary>“淫三国”这个词是真实存在的古籍吗？</summary>
+            <p>“淫”在古代有“过度、沉溺”之意，也存在明清艳情小说托名三国背景的作品，但流传甚少。如今更多是网上对戏说、恶搞三国艳史的一种标签化称呼，并无统一著作。</p>
+        </details>
+        <details class="faq-item">
+            <summary>这里的内容是真实历史吗？</summary>
+            <p>绝对不是。本页所有涉及艳闻、秘史的内容均取材自民间传说、戏曲改编、网络段子或虚构创作，只作为文化娱乐和文学现象讨论，请勿当成真实历史。</p>
+        </details>
+        <details class="faq-item">
+            <summary>为什么三国题材容易产生这类“艳闻”？</summary>
+            <p>三国人物性格鲜明、戏剧性强，加上后世话本、戏曲的渲染，给了民间创作很大的发挥空间。人们喜欢在英雄故事中加入情感与欲望的想象，使其更具人情味或猎奇感。</p>
+        </details>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <p>📚 淫三国 · 野史别传 · 戏言集</p>
+        <p style="margin-top: 6px;"><a href="#">关于本坊</a> | <a href="#">稗官杂谈</a> | <a href="#">免责声明</a></p>
+        <div class="disclaimer">
+            本站内容均为虚构戏说、民间整理，不承担任何历史考证责任。请理性阅读，切勿混淆真实历史。
+        </div>
+    </footer>
+</div>
+</body>
+          </html>
